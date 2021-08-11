@@ -8,10 +8,16 @@ class Battle < Sinatra::Base
   end
 
   get '/' do
-    "Testing infrastructure working!"
+    erb(:index)
   end
 
-  # start the server if ruby file executed directly
+  post '/names' do
+    p params
+    @player_1 = params[:Player1]
+    @player_2 = params[:Player2]
+    erb(:play)
+  end
+
   run! if app_file == $0
 end
 
