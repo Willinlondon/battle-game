@@ -6,7 +6,7 @@ describe Player do
     it "checks a player can be named" do
         expect(player_2.name).to eq("Darth Vader")
     end
-    it "checks the Hit Poitns of the player" do
+    it "checks the Hit Points of the player" do
         expect(player_1.hp).to eq 50
     end
     it "checks if players can attack" do
