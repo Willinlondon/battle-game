@@ -1,8 +1,10 @@
 <h1><%="#{@game.player_1.name} v #{@game.player_2.name}"%></h1><br>
 <div>
   <%=@game.player_1.name%> HP: <%=@game.player_1.hp%>
-  <form action="/attack" method="get">
-    <input type="submit" name="Attack" value="Attack!"><br>
-  </form>
+  <br>
   <%=@game.player_2.name%> HP: <%=@game.player_2.hp%><br>
 </div>
+<%= @game.current_turn.name %>'s move!
+<form action="/attack" method="get">
+    <input type="submit" name="Attack" value="Attack!">
+  </form>
