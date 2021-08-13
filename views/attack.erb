@@ -1,5 +1,5 @@
-<h1><%="#{@game.player_1.name} attacks #{@game.player_2.name} and deals 10 damage"%></h1>
-<%=@game.player_2.name%> HP: <%=@game.player_2.hp%>
+<h1><%="#{@game.opponent_of(@game.current_turn).name} attacks #{@game.current_turn.name} and deals 10 damage"%></h1>
+<%=@game.current_turn.name%>'s HP: <%=@game.current_turn.hp%>
 <form action="/play" method="get">
     <input type="submit" name="OK" value="OK">
   </form>

@@ -22,8 +22,6 @@ class Game
         @current_turn = opponent_of(current_turn)
     end
 
-    private
-
     def opponent_of(player)
         @players.select { |x| x != player }.first
     end
