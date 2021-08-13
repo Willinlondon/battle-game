@@ -1,8 +1,8 @@
-<h1><%="#{@player_1} v #{@player_2}"%></h1><br>
+<h1><%="#{@game.player_1.name} v #{@game.player_2.name}"%></h1><br>
 <div>
-  <%=@player_1%> HP: 50
+  <%=@game.player_1.name%> HP: <%=@game.player_1.hp%>
   <form action="/attack" method="get">
     <input type="submit" name="Attack" value="Attack!"><br>
   </form>
-  <%=@player_2%> HP: 50 <br>
+  <%=@game.player_2.name%> HP: <%=@game.player_2.hp%><br>
 </div>
